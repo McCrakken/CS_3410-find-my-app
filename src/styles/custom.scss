@@ -1,0 +1,7 @@
+//Imports pulls in bootstrap for styles to be overridden
+@import '~bootstrap/scss/bootstrap';
+
+//Create custom styles for bootstrap elements here
+.card {
+  max-width: 20rem;
+}
