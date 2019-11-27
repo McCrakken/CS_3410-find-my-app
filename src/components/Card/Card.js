@@ -3,7 +3,7 @@ import React from 'react';
 const card = (props) => {
   return (
     <div className="card">
-      {props.image ? <img className='card-img-top' src={props.image} alt='Card image cap' /> : null }
+      {props.image ? <img className='card-img-top' src={props.image} /> : null }
       <div className="card-body">
         <h5 className="card-title">
           {props.title ? props.title : null}
