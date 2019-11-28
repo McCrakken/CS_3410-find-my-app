@@ -1,11 +1,25 @@
 import React from 'react';
 
-const sidepanel = (props) => {
+import Accordion from "../../components/Accordion/Accordion";
+import AccordionItem from "../../components/Accordion/AccordionItem/AccordionItem";
+
+const SidePanel = (props) => {
   return (
-    <div className={'col-sm-4 col-md-3'}>
-      Side-Panel Content
+    <div className={'side-panel col-sm-4 col-md-3'}>
+      <Accordion>
+        <AccordionItem title={'First Accordion'} isOpen={true} isDisabled={true}>
+          This is the first example accordion element that is going to be used in our application.
+        </AccordionItem>
+        <AccordionItem title={'Second Accordion'}>
+          Here is the second example accordion component we're
+        </AccordionItem>
+        <AccordionItem title={'Third Accordion'}>
+          This is the third card component, and any content that you write in this section is going to be passed as
+          props.children down to the actual component itself.
+        </AccordionItem>
+      </Accordion>
     </div>
   )
 };
 
-export default sidepanel;
+export default SidePanel;

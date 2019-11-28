@@ -1,6 +1,10 @@
 .PageContent {
   margin: 25px;
   display: flex;
-  justify-content: space-around;
 
+  .side-panel,
+  .main-content {
+    border: 1px solid #808080;
+    padding: 10px;
+  }
 }
