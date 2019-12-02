@@ -2,6 +2,7 @@
 @import '~bootstrap/scss/bootstrap';
 
 //Create custom styles for bootstrap elements here
-.card {
-  max-width: 20rem;
-}
+@import 'components/card';
+@import 'components/accordion';
+
+@import 'hoc/content';
