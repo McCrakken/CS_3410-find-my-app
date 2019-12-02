@@ -12,7 +12,8 @@ function App() {
       <Content>
         <header className="App-header">
           {/*Add your component and pass appropriate props, this is missing.text here because I wanted the <code/> style*/}
-          <Card image={logo}
+          <Card classes={"card"}
+                image={logo}
                 title={'React as Card'}
           >
             {/*You can pass other HTML looking elements (JSX) into your component and generate them as props.children*/}

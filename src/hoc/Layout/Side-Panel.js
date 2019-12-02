@@ -2,7 +2,7 @@ import React from 'react';
 
 import Accordion from "../../components/Accordion/Accordion";
 import AccordionItem from "../../components/Accordion/AccordionItem/AccordionItem";
-
+import NoteCard from "../../components/Card/noteCard/NoteCard"
 const SidePanel = (props) => {
   return (
     <div className={'side-panel col-sm-4 col-md-3'}>
@@ -18,6 +18,8 @@ const SidePanel = (props) => {
           props.children down to the actual component itself.
         </AccordionItem>
       </Accordion>
+    <NoteCard title={'My Title'} content={'some text'}/>
+
     </div>
   )
 };
