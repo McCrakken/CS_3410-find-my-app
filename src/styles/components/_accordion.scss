@@ -1,0 +1,10 @@
+.accordion {
+  .card {
+    max-width: 100%;
+    .card-header {
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+// SCSS allows you to write css programmatically as if styles were an object. The level here would be the same as
+// writing two styles in css for .card > .card-text, but instead you can nest them in the original .card styles
+// That way all the styles from .card get applied to the other levels of styles.
+.card {
+  color: #434c50;
+  max-width: 20rem;
+
+  .card-img-top {
+    background-color: #eef2f2;
+  }
+
+  .card-text {
+    font-size: 1rem;
+  }
+
+}
