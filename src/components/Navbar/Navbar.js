@@ -15,13 +15,22 @@ const nav = (props) => {
       <div className="collapse navbar-collapse" id="navbarSupportedContent">
         <ul className="navbar-nav mr-auto">
           <li className="nav-item">
-            <a className="nav-link" href="/Degree-Path">Degree Path</a>
+            <a className="nav-link" href="/DegreePath">Degree Path</a>
+          </li>
+          <li className="nav-item">
+            <a className="nav-link" href="/DegreeChanges">Degree Path</a>
           </li>
           <li className="nav-item active">
             <a className="nav-link" href="/Events">Events</a>
           </li>
           <li className="nav-item">
+            <a className="nav-link" href="/MajorQuiz">Degree Path</a>
+          </li>
+          <li className="nav-item">
             <a className="nav-link" href="/Schedule">Schedule</a>
+          </li>
+          <li className="nav-item">
+            <a className="nav-link" href="/SignUp">Degree Path</a>
           </li>
           <li className="nav-item dropdown">
             <a className="nav-link dropdown-toggle" href="#"

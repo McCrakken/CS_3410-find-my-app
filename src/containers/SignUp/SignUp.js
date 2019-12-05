@@ -3,15 +3,13 @@ import React, { Component } from 'react';
 import Content from '../../hoc/PageContent';
 import SidePanel from '../../hoc/Layout/Side-Panel';
 import Main from '../../hoc/Layout/Main';
-import EventCardContainer from "./EventCard/EventCardContainer";
 
-class Events extends Component {
+class SignUp extends Component {
   render() {
     return(
       <Content>
         <SidePanel />
-        <Main heading={'Events'}>
-          <EventCardContainer/>
+        <Main heading={'Sign Up Page'}>
         </Main>
       </Content>
     )
@@ -19,4 +17,4 @@ class Events extends Component {
   }
 }
 
-export default Events;
+export default SignUp;
