@@ -1,5 +1,6 @@
 //Imports pulls in bootstrap for styles to be overridden
 @import '~bootstrap/scss/bootstrap';
+@import './themes/colors';
 
 //Create custom styles for bootstrap elements here
 @import 'components/card';
