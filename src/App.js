@@ -1,19 +1,18 @@
 import React from 'react';
-import logo from './logo.svg';
+import { Route, Switch } from 'react-router-dom';
 
-import EventCardContainer from "./containers/EventCard/EventCardContainer";
-import Card from './components/Card/Card';
-import EventCard from "./components/Card/EventCard/EventCard";
 import Nav from './components/Navbar/Navbar'
-import Content from './hoc/PageContent'
+import Events from "./containers/Events/Events";
+import Dashboard from "./components/Dashboard/Dashboard";
 
 function App() {
   return (
     <div className="">
       <Nav/>
-      <Content>
-          <EventCardContainer/>
-      </Content>
+      <Switch>
+        <Route path="/Events" component={Events}/>
+        <Route path="/" component={Dashboard}/>
+      </Switch>
     </div>
   );
 }

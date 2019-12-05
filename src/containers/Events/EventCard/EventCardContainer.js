@@ -1,16 +1,16 @@
 import React, {Component} from 'react';
 
-import logo from '../../logo.svg';
-import EventCard from "../../components/Card/EventCard/EventCard";
-import Form from "../../components/Form/Form";
+import logo from '../../../logo.svg';
+import EventCard from "../../../components/Card/EventCard/EventCard";
+import Form from "../../../components/Form/Form";
 
 class EventCardContainer extends Component {
   state = {
     events: [
-      { title: 'Card - 1', text: 'Text used to make the first event'},
-      { title: 'Card - 2', text: 'Text used to make the second event'},
-      { title: 'Card - 3', text: 'Text used to make the third event'},
-      { title: 'Card - 4', text: 'Text used to make the fourth event'}
+      { title: 'Card - 1', text: 'Text used to make the first event', altText: 'event-1'},
+      { title: 'Card - 2', text: 'Text used to make the second event', altText: 'event-2'},
+      { title: 'Card - 3', text: 'Text used to make the third event', altText: 'event-3'},
+      { title: 'Card - 4', text: 'Text used to make the fourth event', altText: 'event-4'}
     ]
   };
 
@@ -40,6 +40,7 @@ class EventCardContainer extends Component {
       <div className={'event-card-container'}>
         {this.state.events.map((Event) => {
           return <EventCard
+            altText={Event.altText}
             title={Event.title}
             text={Event.text}
             classes={'card event-card'}
