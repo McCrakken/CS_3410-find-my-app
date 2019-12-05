@@ -11,10 +11,11 @@ class MajorQuiz extends Component {
     return(
       <Content>
         <MajorLeftPanel />
-        <Main heading={'Major Quiz Page'}>
+          <Main heading={'In-Depth Assessment'}>
             <QuizContent/>
         </Main>
       </Content>
+        
     )
 
   }
