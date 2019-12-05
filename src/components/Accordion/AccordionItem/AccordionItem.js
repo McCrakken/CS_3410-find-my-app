@@ -13,7 +13,7 @@ const AccordionItem = (props) => {
 
   //Works like the life-cycle hook componentDidMount() but within a functional component
   useEffect(() => {
-    if(this.props.isOpen)
+    if(props.isOpen)
       setToggle('collapse show');
   }, []);
 
