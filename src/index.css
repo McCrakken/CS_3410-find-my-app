@@ -15,8 +15,13 @@ code {
 
 .active {
   background-color: Green;
-  color: white;
+  color: white !important;
+  padding: 10px;
 }
-.a {
-  color: black; 
+a {
+  color: black !important;
+  font-family: Arial;
 }
+
+
+
