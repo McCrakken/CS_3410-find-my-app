@@ -2,15 +2,32 @@
 // writing two styles in css for .card > .card-text, but instead you can nest them in the original .card styles
 // That way all the styles from .card get applied to the other levels of styles.
 .card {
-  color: #434c50;
-  max-width: 20rem;
+  color: $color-text-gray;
+  .card-header {
+    ion-icon {
+      font-size: 1.5rem;
+      padding: 0;
+      .icon-inner,
+      svg {
+        display: inherit;
+        padding: 0;
+      }
+
+    }
+  }
 
   .card-img-top {
-    background-color: #eef2f2;
+    background-color: $color-grey-3;
+  }
+  .card-body {
+    .card-text {
+      font-size: 1rem;
+    }
+    .btn-add {
+      margin: auto;
+    }
   }
 
-  .card-text {
-    font-size: 1rem;
-  }
+
 
 }

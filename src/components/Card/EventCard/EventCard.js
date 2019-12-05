@@ -4,13 +4,9 @@ import Card from '../Card';
 
 const EventCard = (props) => {
   return(
-    <Card
-      classes={'card event-card'}
-      image={props.image}
-      title={props.title}
-      text={props.text}
-    />
-
+    <Card {...props} classes={'card event-card'}>
+      {props.children}
+    </Card>
   )
 };
 

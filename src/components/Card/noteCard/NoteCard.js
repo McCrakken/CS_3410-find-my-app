@@ -2,8 +2,9 @@ import React from 'react';
 import Card from '../Card';
 const Notecard = (props) =>{
   return(
-      <Card classes={'card notecard'} title={props.title}
-            text={props.content} />
+    <Card {...props} classes={'card notecard'}>
+      {props.children}
+    </Card>
   )
 };
 

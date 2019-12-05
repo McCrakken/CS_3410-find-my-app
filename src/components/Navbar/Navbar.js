@@ -4,14 +4,11 @@ import Logo from '../../static/Logo.gif';
 import { NavLink } from "react-router-dom";
 
 const nav = (props) => {
-  const toggleDropdown = (dropDownID) => {
-    document.getElementById(dropDownID).classList.toggle("show");
-  };
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <NavLink className={'navbar-brand'} exact to={'/'}><img src={Logo} style={{width:100, marginTop: -7}} alt={'Find My Major'}/></NavLink>
-      <button className="navbar-toggler" type="button"
-              onClick={() => toggleDropdown("navbarSupportedContent")}>
+      <button className="navbar-toggler" type="button" data-toggle={"collapse"} data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span className="navbar-toggler-icon"></span>
       </button>
 
@@ -36,9 +33,8 @@ const nav = (props) => {
             <NavLink className={'nav-link'} exact to={"/SignUp"}>Sign-Up</NavLink>
           </li>
           <li className="nav-item dropdown">
-            <a className="nav-link dropdown-toggle" href="#"
-               onClick={() => {toggleDropdown('resourceDropdown')}}
-               id="navbarDropdown" role="button">
+            <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                         aria-haspopup="true" aria-expanded="false">
               Resources
             </a>
             <div className="dropdown-menu" id='resourceDropdown' aria-labelledby="navbarDropdown">

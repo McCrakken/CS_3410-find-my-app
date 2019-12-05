@@ -1,0 +1,36 @@
+.card.panel-card {
+  display: flex;
+  .card-header {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .card-body {
+    display: flex;
+    flex-flow: column wrap;
+    flex-grow: 1;
+    padding: 0.7rem;
+
+    > div {
+      margin-bottom: 7px;
+    }
+
+    > .card.panel-card {
+      border: 0 solid transparent;
+
+      .card-header {
+        background-color: transparent;
+        border-bottom: 1px solid $color-grey-2;
+        padding-bottom: 5px;
+      }
+      .card-text {
+        font-size: 0.95rem;
+      }
+      .card-title {
+        font-size: 1.05rem;
+        margin-bottom: 7px;
+      }
+    }
+  }
+}
