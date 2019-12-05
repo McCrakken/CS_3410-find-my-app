@@ -1,10 +1,17 @@
 import React from 'react';
+
 import Card from '../Card';
-const Eventcard = (props) =>{
-    return(
-        <Card classes={'card eventcard'} title={props.title}
-              text={props.content} />
-    )
+
+const EventCard = (props) => {
+  return(
+    <Card
+      classes={'card event-card'}
+      image={props.image}
+      title={props.title}
+      text={props.text}
+    />
+
+  )
 };
 
-export default Eventcard;
+export default EventCard;
