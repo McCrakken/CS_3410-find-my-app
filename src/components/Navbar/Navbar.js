@@ -42,11 +42,11 @@ const nav = (props) => {
               Resources
             </a>
             <div className="dropdown-menu" id='resourceDropdown' aria-labelledby="navbarDropdown">
-              <a className="dropdown-item" href="#">Wolverine Track</a>
-              <a className="dropdown-item" href="#">Academic Counseling</a>
-              <a className="dropdown-item" href="#">Tutoring Labs</a>
-              <a className="dropdown-item" href="#">Campus Map</a>
-              <a className="dropdown-item" href="#">Clubs</a>
+              <button className="dropdown-item">Wolverine Track</button>
+              <button className="dropdown-item">Academic Counseling</button>
+              <button className="dropdown-item">Tutoring Labs</button>
+              <button className="dropdown-item">Campus Map</button>
+              <button className="dropdown-item">Clubs</button>
             </div>
           </li>
         </ul>
