@@ -3,13 +3,16 @@ import React, { Component } from 'react';
 import Content from '../../hoc/PageContent';
 import SidePanel from '../../hoc/Layout/Side-Panel';
 import Main from '../../hoc/Layout/Main';
+import QuizContent from "./quizContent";
+import MajorLeftPanel from "./MajorLeftPanel";
 
 class MajorQuiz extends Component {
   render() {
     return(
       <Content>
-        <SidePanel />
+        <MajorLeftPanel />
         <Main heading={'Major Quiz Page'}>
+            <QuizContent/>
         </Main>
       </Content>
     )
