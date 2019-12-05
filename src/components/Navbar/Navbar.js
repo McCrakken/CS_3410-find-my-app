@@ -1,16 +1,15 @@
 import React from 'react';
 import Logo from './Logo.gif';
 
-import { Route, NavLink, HashRouter} from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const nav = (props) => {
   const toggleDropdown = (dropDownID) => {
     document.getElementById(dropDownID).classList.toggle("show");
   };
   return (
-    <HashRouter>
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
-      <a className="navbar-brand" href="/"><img src={Logo} style={{width:100, marginTop: -7}} alt={'Find My Major'}/></a>
+      <NavLink className={'navbar-brand'} exact to={'/'}><img src={Logo} style={{width:100, marginTop: -7}} alt={'Find My Major'}/></NavLink>
       <button className="navbar-toggler" type="button"
               onClick={() => toggleDropdown("navbarSupportedContent")}>
         <span className="navbar-toggler-icon"></span>
@@ -19,22 +18,22 @@ const nav = (props) => {
       <div className="collapse navbar-collapse" id="navbarSupportedContent">
         <ul className="navbar-nav mr-auto">
           <li className="nav-item">
-            <a className="nav-link" href="/DegreePath"><NavLink>Degree Path</NavLink></a>
+            <NavLink className={'nav-link'} exact to={"/DegreePath"}>Degree Path</NavLink>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="/DegreeChanges"><NavLink>Degree Changes</NavLink></a>
-          </li>
-          <li className="nav-item active">
-            <a className="nav-link" href="/Events"><NavLink>Events</NavLink></a>
+            <NavLink className={'nav-link'} exact to={"/DegreeChanges"}>Degree Changes</NavLink>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="/MajorQuiz"><NavLink>Major Quiz</NavLink></a>
+            <NavLink className={'nav-link'} exact to={"/Events"}>Events</NavLink>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="/Schedule"><NavLink>Schedule</NavLink></a>
+            <NavLink className={'nav-link'} exact to={"/MajorQuiz"}>Major Quiz</NavLink>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="/SignUp"><NavLink>Sign-Up</NavLink></a>
+            <NavLink className={'nav-link'} exact to={"/Schedule"}>Schedule</NavLink>
+          </li>
+          <li className="nav-item">
+            <NavLink className={'nav-link'} exact to={"/SignUp"}>Sign-Up</NavLink>
           </li>
           <li className="nav-item dropdown">
             <a className="nav-link dropdown-toggle" href="#"
@@ -53,11 +52,10 @@ const nav = (props) => {
         </ul>
         <form className="form-inline my-2 my-lg-0">
           <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
-            <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
         </form>
       </div>
     </nav>
-    </HashRouter>
   )
 };
 
