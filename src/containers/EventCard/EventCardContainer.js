@@ -7,7 +7,6 @@ class EventCardContainer extends Component {
     state = {
         events: [
             { title: 'Card - 1', text: 'Text used to make the first event'},
-            { title: 'Card - 2', text: 'Text used to make the second event'},
             { title: 'Card - 3', text: 'Text used to make the third event'},
             { title: 'Card - 4', text: 'Text used to make the fourth event'}
         ]

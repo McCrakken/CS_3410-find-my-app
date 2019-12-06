@@ -10,6 +10,7 @@ class QuizContent extends Component{
     };
     render() {
         return(
+            <div>
             <div className={'quiz-content'}>
                 {this.state.event.map((Event)=>{
                     return<EventCard
@@ -22,7 +23,46 @@ class QuizContent extends Component{
             </div>
 
 
-        )
+            <div className={'quiz-content'}>
+            {this.state.event.map((Event)=>{
+                    return<EventCard
+                        title={Event.title}
+                        classes={'card event-card'}
+
+                    />}
+                )}
+                 <Answer/>
+                </div>
+
+                <div className={'quiz-content'}>
+                    {this.state.event.map((Event)=>{
+                        return<EventCard
+                            title={Event.title}
+                            classes={'card event-card'}
+
+                        />}
+                    )}
+                    <Answer/>
+                </div>
+
+                <div className={'quiz-content'}>
+                    {this.state.event.map((Event)=>{
+                        return<EventCard
+                            title={Event.title}
+                            classes={'card event-card'}
+
+                        />}
+                    )}
+                    <Answer/>
+                </div>
+
+
+
+            </div>
+
+
+
+    )
     }
 }
 
