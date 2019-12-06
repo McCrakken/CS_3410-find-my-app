@@ -5,7 +5,7 @@ import Nav from './components/Navbar/Navbar'
 import Events from "./containers/Events/Events";
 import DegreeChanges from "./containers/DegreeChanges/DegreeChanges";
 import DegreePath from "./containers/DegreePath/DegreePath";
-import MajorQuiz from "./containers/MajorQuiz/MajorQuiz";
+import MajorQuiz from "./containers/MajorQuiz/majorQuiz";
 import SignUp from "./containers/SignUp/SignUp";
 import Dashboard from "./components/Dashboard/Dashboard";
 import Schedule from "./containers/Schedule/Schedule";

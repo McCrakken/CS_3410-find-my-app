@@ -1,11 +1,12 @@
 .PageContent {
-  margin: 25px;
+  color: $color-text-gray;
   display: flex;
+  margin: 25px 10px;
 
-  .side-panel,
+  .side-panel {
+    margin-right: 10px;
+  }
   .main-content {
-    border: 1px solid #808080;
-    padding: 10px;
   }
 }
 

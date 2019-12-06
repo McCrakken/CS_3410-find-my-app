@@ -1,16 +1,14 @@
 import React from 'react';
 
 const card = (props) => {
+  const headerBtn = props.headerBtn ? <button className={'btn btn-light'}>{props.headerBtn}</button>: null;
   return (
     <div className={props.classes}>
       {props.image ? <img className='card-img-top' src={props.image} alt={props.altText}/> : null }
+      {props.header ? <h5 className={'card-header'}>{props.header}<span title={props.headerBtnText}>{headerBtn}</span></h5> : null }
       <div className="card-body">
-        <h5 className="card-title">
-          {props.title ? props.title : null}
-        </h5>
-        <p className='card-text'>
-          {props.text ? props.text : null}
-        </p>
+        {props.title ? <h5 className="card-title">{props.title}</h5> : null}
+        {props.text ? <p className='card-text'>{props.text}</p> : null}
         {props.children}
       </div>
     </div>
