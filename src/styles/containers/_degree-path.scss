@@ -1,4 +1,4 @@
-.degree-changes {
+.degree-path {
   .App {
 
   }
@@ -52,7 +52,6 @@
     display: flex;
     background-color: #275038;
     justify-content: center;
-    flex-flow: row wrap;
   }
 
   .flex-container > div {
@@ -110,14 +109,13 @@
 
   .flip-card {
     background-color: transparent;
-    width: auto;
+    width: 300px;
     height: 300px;
     perspective: 1000px;
   }
 
   MyBarChart{
     width: 100%;
-    justify-content: center;
   }
 
   .flip-card-inner {
@@ -277,3 +275,81 @@
 }
 
 
+.flex-container1 {
+  display: flex;
+  background-color: #275038;
+  justify-content: center;
+  flex-flow: row wrap;
+}
+
+.flex-container1 > div {
+  background-color: #A7ABAA;
+  margin: 10px;
+  padding: 20px;
+  font-size: 30px;
+}
+
+.nogrow{
+  flex-basis: 300px;
+}
+
+.aligns {
+  align-self: center;
+}
+.btnSize {
+  height: 100%;
+  width: 100%;
+  border-radius: 4px;
+  background-color: #4CAF50;
+  color: White;
+  border: 2px solid #4CAF50; /* Green */
+}
+
+button {
+  font-family: Arial;
+  font-weight: bold;
+}
+button:hover {
+  background-color: white;
+  color: black;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+.divider{
+  width:3px;
+  height:auto;
+  display:inline-block;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.type{
+  font-family: Arial;
+  font-size: 20 px;
+}
+  .card.event-card2 {
+    flex-direction: row;
+    max-width: 100%;
+    min-width: 250px;
+  
+    img {
+      border-radius: 3px;
+      margin: 10px;
+      max-width: 100px;
+      border: 1px solid #eef2f2;
+    }
+  
+    .card-body2 {
+      display: block;
+    }
+  }

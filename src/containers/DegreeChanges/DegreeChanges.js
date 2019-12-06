@@ -6,15 +6,15 @@ import MyBarChart from './BarCharts/MyBarChart';
 class DegreeChanges extends Component {
   render() {
     const data = [
-      { "y": 100, "x": "Jan" },
-      { "y": 112, "x": "Feb" },
-      { "y": 230, "x": "Mar" }
+      { "y": 100, "x": "Art" },
+      { "y": 112, "x": "Bio." },
+      { "y": 230, "x": "Math" },
     ];
     
     return (
       <div className={'degree-changes'}>
         <div className="flex-container">
-          <div className="size1">
+        <div className="size1">
             <div>
               <button className="btnSize">Change Degree</button>
             </div>
@@ -25,7 +25,7 @@ class DegreeChanges extends Component {
             <div className="divider"></div>
             <div className="size1">
               Potential Degrees
-              <div className="degreeName">
+              <div >
                 <div className="flip-card">
                   <div className="flip-card-inner">
                     <div className="flip-card-front">
@@ -33,16 +33,16 @@ class DegreeChanges extends Component {
 
                     </div>
                     <div className="flip-card-back">
-                      <h1>Degree Name</h1>
-                      <p>Architect  Engineer</p>
-                      <p>Degree Details</p>
+                      <h1>Degree Name: </h1>
+                      <p>Software Engieering</p>
+                      <p>Degree Details: development for computers in information technology.</p>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div className="size2">
+        <div className="size2">
             <div id="myDIV" className="header">
               <h2 >Degree Updates</h2>
             </div>
@@ -55,8 +55,8 @@ class DegreeChanges extends Component {
               </li>
               <li className="checked">
                 <img src={Icon} style={{width:70, height: 70, marginTop: 10, marginRight: 10, padding: 3 }}></img>
-                <h3>Class Name</h3>
-                <p> Pay bills</p>
+                <h3>Calculus 2</h3>
+                <p> No longer requried</p>
               </li>
               <li>
                 <img src={Icon} style={{width:70, height: 70, marginTop: 10, marginRight: 10, padding: 3 }}></img>
