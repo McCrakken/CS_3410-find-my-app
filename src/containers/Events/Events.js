@@ -5,6 +5,7 @@ import SidePanel from '../../hoc/Layout/Side-Panel';
 import Main from '../../hoc/Layout/Main';
 import EventCardContainer from "./EventCard/EventCardContainer";
 import NotesContainer from "./Notes/NotesContainer";
+import Modal from "../../components/Modal/Modal";
 
 class Events extends Component {
   render() {
@@ -15,6 +16,7 @@ class Events extends Component {
         </SidePanel>
         <Main heading={'Events'}>
           <EventCardContainer/>
+          <Modal/>
         </Main>
       </Content>
     )

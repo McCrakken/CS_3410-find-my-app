@@ -1,8 +1,9 @@
-import React, {Component} from 'react';
+import React, {Component, Fragment} from 'react';
 
 import logo from '../../../logo.svg';
 import EventCard from "../../../components/Card/EventCard/EventCard";
 import Form from "../../../components/Form/Form";
+import Modal from "../../../components/Modal/Modal";
 
 class EventCardContainer extends Component {
   state = {
@@ -14,28 +15,25 @@ class EventCardContainer extends Component {
     ]
   };
 
-  handleChange = (e) => {
-    if(["title", "text"].includes(e.target.className)) {
-      let events = [...this.state.events];
-      events[e.target.dataset.id][e.target.className] = e.target.value;
-      this.setState({events}, () => console.log(this.state.events))
-    } else {
-      this.setState({[e.target.title]: e.target.value});
-    }
-  };
-
-  addEvent = (e) => {
-    this.setState((prevState) => ({
-      events: [...prevState.events, {title:e.target, text:""}]
-    }));
-  };
-
-  handleSubmit = (e) => {
-    console.log(this.state.events);
-    e.preventDefault();
-  };
-
   render() {
+    const modalBody = (
+      <Fragment>
+        <div className="form-group">
+          <label htmlFor="title">Event Title</label>
+          <input type="text" className="form-control" id="title" />
+        </div>
+        <div className="form-group">
+          <label htmlFor="text">Event Description</label>
+          <textarea className="form-control" id="text" />
+        </div>
+      </Fragment>
+    );
+    const modalFooter = (
+      <Fragment>
+        <button type="button" data-dismiss={'modal'} className="btn btn-light">Cancel</button>
+        <button type="submit" data-dismiss={'modal'} className="btn btn-primary">Submit</button>
+      </Fragment>
+    );
     return(
       <div className={'event-card-container'}>
         {this.state.events.map((Event) => {
@@ -47,8 +45,10 @@ class EventCardContainer extends Component {
             image={logo}
           />}
         )}
-        <button className={'btn btn-primary'}>Add Event</button>
-        <Form onSubmit={this.handleSubmit} onChange={this.handleChange} addNew={this.addEvent}/>
+        <button className={'btn btn-primary'} data-toggle={'modal'} data-target={'#addEventModal'}>
+          Add Event
+        </button>
+        <Modal id={'addEventModal'} title={'Add Event'} body={modalBody} footer={modalFooter} />
       </div>
 
     )

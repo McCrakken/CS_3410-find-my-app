@@ -2,6 +2,7 @@ import React, {Component, Fragment} from 'react';
 
 import PanelCard from "../../../components/Card/PanelCard/PanelCard";
 import Notecard from "../../../components/Card/noteCard/NoteCard";
+import Modal from "../../../components/Modal/Modal";
 
 class NotesContainer extends Component {
   state = {
@@ -23,6 +24,26 @@ class NotesContainer extends Component {
   };
 
   render() {
+    const modalBody = (
+      <Fragment>
+        <div className="form-group">
+          <label htmlFor="title">Note Title</label>
+          <input type="text" className="form-control" id="title" />
+        </div>
+        <div className="form-group">
+          <label htmlFor="text">Note Content</label>
+          <textarea className="form-control" id="text" />
+        </div>
+      </Fragment>
+    );
+
+    const modalFooter = (
+      <Fragment>
+        <button type="button" data-dismiss={'modal'} className="btn btn-light">Cancel</button>
+        <button type="submit" data-dismiss={'modal'} className="btn btn-primary">Submit</button>
+      </Fragment>
+    );
+
     const panelButton = 'New Section';
     const sectionBtn = 'Add Note';
     const addItemBtn = <ion-icon style={{display: 'block', color: '#434c50'}} name="add"></ion-icon>;
@@ -42,8 +63,11 @@ class NotesContainer extends Component {
           {this.state.Notes.map((Note) => {
             return <Notecard title={Note.title} text={Note.text}/>
           })}
-          <button className={'btn btn-light btn-add'}>{sectionBtn}</button>
+          <button className={'btn btn-light btn-add'} data-toggle={'modal'} data-target={'#addNoteModal'}>
+            {sectionBtn}
+          </button>
         </PanelCard>
+        <Modal title={'Add Note'} id={'addNoteModal'} body={modalBody} footer={modalFooter}/>
       </Fragment>
 
     )
