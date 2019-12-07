@@ -13,9 +13,8 @@ class Calendar extends Component {
       <FullCalendar
         defaultView={"dayGridWeek"}
         dateClick={handleDateClick}
-        height={743}
+        height={750}
         plugins={[ dayGridPlugin, interactionPlugin ]}
-        weekends={false}
       />
     )
   }

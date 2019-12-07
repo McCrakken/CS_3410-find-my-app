@@ -1,2 +1,37 @@
 @import '~@fullcalendar/core/main.css';
 @import '~@fullcalendar/daygrid/main.css';
+
+.fc.fc-ltr.fc-unthemed {
+
+  .fc-button-primary {
+    background-color: $color-grey-4;
+    border: 1px solid $color-grey-2;
+    color: $color-text-gray;
+
+    &:focus {
+      box-shadow: none;
+    }
+    &:hover {
+      background-color: $color-grey-3;
+    }
+
+    &.fc-today-button {
+      background-color: $color-green-1;
+      border: 1px solid transparent;
+      color: $color-primary-white;
+
+      &:disabled {
+        opacity: .7;
+
+        &:hover {
+          cursor: not-allowed;
+        }
+      }
+    }
+  }
+
+  td.fc-today {
+    background-color: $color-green-4;
+    opacity: .5;
+  }
+}

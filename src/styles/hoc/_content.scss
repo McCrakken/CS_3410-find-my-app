@@ -1,12 +1,17 @@
 .PageContent {
   color: $color-text-gray;
   display: flex;
+  align-items: stretch;
   margin: 25px 10px;
 
   .side-panel {
     margin-right: 10px;
   }
   .main-content {
+    padding-right: 50px;
+    .page-content {
+      align-items: stretch;
+    }
   }
 }
 
