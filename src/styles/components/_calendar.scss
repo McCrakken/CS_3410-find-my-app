@@ -2,6 +2,15 @@
 @import '~@fullcalendar/daygrid/main.css';
 
 .fc.fc-ltr.fc-unthemed {
+  .fc-toolbar {
+    align-items: flex-end;
+    &.fc-header-toolbar {
+      margin-bottom: 1em;
+    }
+    h2 {
+      font-size: 1.3rem;
+    }
+  }
 
   .fc-button-primary {
     background-color: $color-grey-4;

@@ -45,7 +45,7 @@ class Schedule extends Component {
         <SidePanel>
           <NotesContainer state={this.state}/>
         </SidePanel>
-        <Main>
+        <Main heading={'Schedule'}>
           <Calendar />
         </Main>
       </Content>
