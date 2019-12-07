@@ -1,22 +1,14 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-
-const Answer = (props)=>{
+const Answer = (props) => {
     return(
-
-        <div className={props.classes}>
-        <div>
-            <button className="btn btn-outline-secondary" type="submit">Strongly Agree</button>
-            <button className="btn btn-outline-secondary" type="submit">Agree</button>
-            <button className="btn btn-outline-secondary" type="submit">Neutral</button>
-            <button className="btn btn-outline-secondary" type="submit">Disagree</button>
-            <button className="btn btn-outline-secondary" type="submit">Strongly Disagree</button>
-
+        <div className={'quiz-buttons'}>
+            <button className="btn btn-light" type="submit">Strongly Agree</button>
+            <button className="btn btn-light" type="submit">Agree</button>
+            <button className="btn btn-light" type="submit">Neutral</button>
+            <button className="btn btn-light" type="submit">Disagree</button>
+            <button className="btn btn-light" type="submit">Strongly Disagree</button>
         </div>
-
-            {props.children}
-        </div>
-
     )
 };
 

@@ -13,7 +13,7 @@ class MajorQuiz extends Component {
         <SidePanel>
           <MajorLeftPanel />
         </SidePanel>
-          <Main heading={'In-Depth Assessment'}>
+          <Main heading={'Short Assessment'}>
             <QuizContent/>
         </Main>
       </Content>

@@ -26,7 +26,7 @@ class MajorLeftPanel extends Component {
           <button className={'btn btn-primary'}>Major Discovery</button>
 
           <ul className="list-group">
-            <button className="list-group-item list-group-item-action">
+            <button className="list-group-item list-group-item-action active">
               Short Assessment
               <span className={'float-right'}>10 minutes</span>
             </button>

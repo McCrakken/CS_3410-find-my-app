@@ -1,69 +1,34 @@
 import React, {Component} from 'react';
-import logo from '../../logo.svg';
-import EventCard from "../../components/Card/EventCard/EventCard";
+
+import QuizCard from "../../components/Card/QuizCard/QuizCard";
 import Answer from "./AnswerOption";
+
 class QuizContent extends Component{
-    state = {
-        event:[
-            { title: 'Please answer questions below:', text: 'Text used to make the first event'},
-        ]
-    };
-    render() {
-        return(
-            <div>
-            <div className={'quiz-content'}>
-                {this.state.event.map((Event)=>{
-                    return<EventCard
-                    title={Event.title}
-                    classes={'card event-card'}
-
-                    />}
-                )}
+  state = {
+    questions:[
+      { number: 1, text: 'Example question content for an assessment item'},
+      { number: 2, text: 'Example question content for an assessment item'},
+      { number: 3, text: 'Example question content for an assessment item'},
+      // { number: 4, text: 'Example question content for an assessment item'},
+      // { number: 5, text: 'Example question content for an assessment item'},
+    ]
+  };
+  render() {
+    return(
+      <div className={'quiz-content'}>
+        <label>Please answer the questions below:</label>
+        <div className={'questions-container'}>
+          {this.state.questions.map((Question)=>{
+            return (
+              <QuizCard title={Question.number + ') ' + Question.text} classes={'card quiz-card'}>
                 <Answer/>
-            </div>
-
-
-            <div className={'quiz-content'}>
-            {this.state.event.map((Event)=>{
-                    return<EventCard
-                        title={Event.title}
-                        classes={'card event-card'}
-
-                    />}
-                )}
-                 <Answer/>
-                </div>
-
-                <div className={'quiz-content'}>
-                    {this.state.event.map((Event)=>{
-                        return<EventCard
-                            title={Event.title}
-                            classes={'card event-card'}
-
-                        />}
-                    )}
-                    <Answer/>
-                </div>
-
-                <div className={'quiz-content'}>
-                    {this.state.event.map((Event)=>{
-                        return<EventCard
-                            title={Event.title}
-                            classes={'card event-card'}
-
-                        />}
-                    )}
-                    <Answer/>
-                </div>
-
-
-
-            </div>
-
-
-
+              </QuizCard>
+            )}
+          )}
+        </div>
+      </div>
     )
-    }
+  }
 }
 
 export default QuizContent;

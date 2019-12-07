@@ -1,0 +1,30 @@
+.panel-card {
+  .list-group {
+    .active {
+      background-color: $color-grey-3;
+      border-color: $color-grey-3;
+      color: $color-text-gray;
+    }
+  }
+}
+.quiz-card {
+  border: 1px solid transparent;
+  margin-bottom: 10px;
+
+  .card-title {
+    margin-bottom: 20px;
+  }
+  .card-body {
+    padding-left: 0;
+  }
+
+  .quiz-buttons {
+    display: flex;
+    justify-content: flex-start;
+
+    button {
+      margin-right: 10px;
+    }
+  }
+
+}
