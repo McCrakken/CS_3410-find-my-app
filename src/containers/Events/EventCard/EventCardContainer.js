@@ -2,7 +2,6 @@ import React, {Component, Fragment} from 'react';
 
 import logo from '../../../logo.svg';
 import EventCard from "../../../components/Card/EventCard/EventCard";
-import Form from "../../../components/Form/Form";
 import Modal from "../../../components/Modal/Modal";
 
 class EventCardContainer extends Component {

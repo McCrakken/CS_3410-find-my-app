@@ -35,3 +35,8 @@
     opacity: .5;
   }
 }
+
+.btn, .btn-light {
+  &:focus,
+  &.focus { box-shadow: none; }
+}
