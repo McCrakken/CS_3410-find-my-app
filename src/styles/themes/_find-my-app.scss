@@ -1,0 +1,11 @@
+.btn-primary {
+  background-color: $color-green-1;
+  border-color: $color-green-1;
+
+  &:not(:disabled):not(.disabled) {
+    &:hover, &:active {
+      background-color: $color-primary-green;
+      border-color: $color-primary-green;
+    }
+  }
+}

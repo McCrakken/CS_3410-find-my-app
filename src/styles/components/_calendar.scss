@@ -36,7 +36,6 @@
   }
 }
 
-.btn, .btn-light {
-  &:focus,
-  &.focus { box-shadow: none; }
+.btn, .btn-light, .btn-primary, .btn-secondary {
+  box-shadow: none !important;
 }
