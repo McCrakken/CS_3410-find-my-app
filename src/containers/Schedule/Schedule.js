@@ -8,7 +8,7 @@ import Calendar from "../../components/Calendar/Calendar";
 
 class Schedule extends Component {
   state = {
-    Heading: 'Events',
+    Heading: 'Reminders',
     HeadingBtnText: 'Add Event',
     AddBtnText: 'Add Event',
     AddModalText: 'Event',
