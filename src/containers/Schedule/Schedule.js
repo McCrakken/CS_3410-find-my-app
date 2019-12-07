@@ -13,6 +13,7 @@ class Schedule extends Component {
     AddBtnText: 'Add Event',
     AddModalText: 'Event',
     AddBtnDisplay: true,
+    hasModal: true,
     SubSection: [
       { heading: 'Dec 9, 2019 - Monday',
         Notes: [

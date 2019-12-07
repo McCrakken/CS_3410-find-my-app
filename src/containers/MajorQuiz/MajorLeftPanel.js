@@ -1,29 +1,54 @@
-import React from 'react';
+import React, {Component} from 'react';
 
 import Accordion from "../../components/Accordion/Accordion";
 import AccordionItem from "../../components/Accordion/AccordionItem/AccordionItem";
 import NoteCard from "../../components/Card/noteCard/NoteCard";
+import NotesContainer from "../Events/Notes/NotesContainer";
 
-const MajorLeftPanel = (props) => {
+class MajorLeftPanel extends Component {
+  state = {
+    Heading: 'Assessments',
+    AddBtnDisplay: false,
+    hasModal: false,
+    SubSection: [
+      { heading: 'Past Assessments',
+        Notes: [
+          { title: 'Medium Assessment',
+            text: 'Completed on: 12/7/19',
+            borderColor: 'purple-1'
+          },
+          { title: 'Short Assessment',
+            text: 'Completed on: 12/3/19',
+            borderColor: 'blue-1'
+          }]
+      }]
+  };
+  render() {
     return (
-        <div className={'side-panel col-sm-4 col-md-3'}>
-            <NoteCard title={'Major Discovery'} content={""}/>
+      <div>
 
-            <Accordion>
-                <AccordionItem title={'Assessments'}>
-                    <p>Short assessment (5 - 10 minutes)</p>
-                    <p>Medium assessment (20 minutes)</p>
-                    <p>Long assessment (30 minutes)</p>
-                </AccordionItem>
+        <NotesContainer state={this.state}>
+          <button className={'btn btn-primary'}>Major Discovery</button>
 
-              <AccordionItem title={'Past Assessments'}>
-                <p>Date: ---------<span>   </span><span>Type:----------</span></p>
-                <p>Date: ---------<span>   </span><span>Type:----------</span></p>
-             </AccordionItem>
-            </Accordion>
-
-        </div>
+          <ul className="list-group">
+            <button className="list-group-item list-group-item-action">
+              Short Assessment
+              <span className={'float-right'}>10 minutes</span>
+            </button>
+            <button className="list-group-item list-group-item-action">Medium Assessment
+              <span className={'float-right'}>
+                20 minutes</span>
+            </button>
+            <button className="list-group-item list-group-item-action">
+              Long Assessment
+              <span className={'float-right'}>30 minutes</span>
+            </button>
+          </ul>
+        </NotesContainer>
+      </div>
     )
+  }
+
 };
 
 export default MajorLeftPanel;

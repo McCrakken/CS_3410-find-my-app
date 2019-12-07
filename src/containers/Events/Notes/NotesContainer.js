@@ -8,10 +8,11 @@ class NotesContainer extends Component {
   constructor(props) {
     super(props);
     this.state = this.props.state;
+    this.children = this.props.children;
   }
 
   render() {
-    const modalBody = (
+    const modalBody = this.state.hasModal ? (
       <Fragment>
         <div className="form-group">
           <label htmlFor="title">{this.state.AddModalText} Title</label>
@@ -22,7 +23,7 @@ class NotesContainer extends Component {
           <textarea className="form-control" id="text" />
         </div>
       </Fragment>
-    );
+    ): null;
 
     const modalFooter = (
       <Fragment>
@@ -30,6 +31,9 @@ class NotesContainer extends Component {
         <button type="submit" data-dismiss={'modal'} className="btn btn-primary">Submit</button>
       </Fragment>
     );
+    const modal = this.state.hasModal ? (
+      <Modal title={this.state.HeadingBtnText} id={'addNoteModal'} body={modalBody} footer={modalFooter}/>
+    ): null;
 
     const addHeaderBtn = this.state.AddBtnDisplay ? (
       <button className={'btn btn-light btn-add'} data-toggle={'modal'} data-target={'#addNoteModal'}>
@@ -42,28 +46,37 @@ class NotesContainer extends Component {
       </button>
     ): null;
 
+    const subsections = () => {
+      return this.state.SubSection.map((Section) => {
+        return (
+          <PanelCard header={Section.heading} headerBtn={addItemBtn}>
+            {Section.Notes.map((Card) => {
+              return <Notecard title={Card.title} text={Card.text} borderColor={Card.borderColor}/>
+            })}
+          </PanelCard>
+        )
+      })
+    };
+
+    const items = () => {
+      return this.state.Notes ? this.state.Notes.map((Note) => {
+        return <Notecard title={Note.title} text={Note.text}/>
+      }): null
+    };
+
     return(
       <Fragment>
         <PanelCard header={this.state.Heading} headerBtn={addHeaderBtn}>
-          {this.state.SubSection.map((Section) => {
-            return (
-              <PanelCard header={Section.heading} headerBtn={addItemBtn}>
-                {Section.Notes.map((Card) => {
-                  return <Notecard title={Card.title} text={Card.text} borderColor={Card.borderColor}/>
-                })}
-              </PanelCard>
-            )
-          })}
-          {this.state.Notes ? this.state.Notes.map((Note) => {
-            return <Notecard title={Note.title} text={Note.text}/>
-          }): null}
+          {this.children}
+          {subsections()}
+          {items()}
           {this.state.AddBtnDisplay ? (
             <button className={'btn btn-light btn-add'} data-toggle={'modal'} data-target={'#addNoteModal'}>
               {this.state.AddBtnText}
             </button>
           ): null}
         </PanelCard>
-        <Modal title={this.state.HeadingBtnText} id={'addNoteModal'} body={modalBody} footer={modalFooter}/>
+        {modal}
       </Fragment>
 
     )

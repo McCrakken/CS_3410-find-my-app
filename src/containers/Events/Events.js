@@ -12,8 +12,9 @@ class Events extends Component {
     Heading: 'Notes',
     HeadingBtnText: 'Add Section',
     AddBtnText: 'Add Note',
-    AddModalText: 'Event',
     AddBtnDisplay: true,
+    AddModalText: 'Event',
+    hasModal: true,
     SubSection: [
       { heading: 'Human Factors',
         Notes: [
