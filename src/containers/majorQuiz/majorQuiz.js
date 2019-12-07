@@ -10,7 +10,9 @@ class MajorQuiz extends Component {
   render() {
     return(
       <Content>
-        <MajorLeftPanel />
+        <SidePanel>
+          <MajorLeftPanel />
+        </SidePanel>
           <Main heading={'In-Depth Assessment'}>
             <QuizContent/>
         </Main>

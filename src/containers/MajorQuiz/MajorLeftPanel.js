@@ -1,8 +1,5 @@
 import React, {Component} from 'react';
 
-import Accordion from "../../components/Accordion/Accordion";
-import AccordionItem from "../../components/Accordion/AccordionItem/AccordionItem";
-import NoteCard from "../../components/Card/noteCard/NoteCard";
 import NotesContainer from "../Events/Notes/NotesContainer";
 
 class MajorLeftPanel extends Component {
@@ -25,8 +22,6 @@ class MajorLeftPanel extends Component {
   };
   render() {
     return (
-      <div>
-
         <NotesContainer state={this.state}>
           <button className={'btn btn-primary'}>Major Discovery</button>
 
@@ -45,11 +40,9 @@ class MajorLeftPanel extends Component {
             </button>
           </ul>
         </NotesContainer>
-      </div>
     )
   }
-
-};
+}
 
 export default MajorLeftPanel;
 
