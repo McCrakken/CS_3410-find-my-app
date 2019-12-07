@@ -9,13 +9,25 @@ class NotesContainer extends Component {
     SubSection: [
       { heading: 'Human Factors',
         Notes: [
-          { title: 'It\'s the Final!', text: 'Don\'t panic! Just breathe, just breathe... In and out now, here we go.'},
-          { title: 'Prototype Preparation', text: 'Work with the group to finalize your high-def prototype.'},
+          { title: 'It\'s the Final!',
+            text: 'Don\'t panic! Just breathe, just breathe... In and out now, here we go.',
+            borderColor: 'green-1'
+          },
+          { title: 'Prototype Preparation',
+            text: 'Work with the group to finalize your high-def prototype.',
+            borderColor: 'green-1'
+          },
         ]},
       { heading: 'Discrete Math II',
         Notes: [
-          { title: 'Another Final?', text: 'I guess it must just be that time of season.'},
-          { title: 'Will and Testament', text: 'Just kidding, you\'ll be fine... right?'},
+          { title: 'Another Final?',
+            text: 'I guess it must just be that time of season.',
+            borderColor: 'yellow-1'
+          },
+          { title: 'Will and Testament',
+            text: 'Just kidding, you\'ll be fine... right?',
+            borderColor: 'yellow-1'
+          },
         ]
       }],
     Notes: [
@@ -55,7 +67,7 @@ class NotesContainer extends Component {
             return (
               <PanelCard header={Section.heading} headerBtn={sectionBtn}>
                 {Section.Notes.map((Card) => {
-                  return <Notecard title={Card.title} text={Card.text}/>
+                  return <Notecard title={Card.title} text={Card.text} borderColor={Card.borderColor}/>
                 })}
               </PanelCard>
             )
