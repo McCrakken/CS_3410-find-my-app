@@ -1,0 +1,9 @@
+.courses-container {
+  display: flex;
+  justify-content: space-between;
+  > .panel-card {
+    max-width: 50%;
+    margin-right: 25px;
+    min-height: 680px;
+  }
+}
