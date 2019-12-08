@@ -20,7 +20,7 @@ class DegreeChanges extends Component {
             </div>
             <div className="divider"></div>
             <div>
-              <button className="btnSize">Set Up Meeting With Councilor</button>
+              <button className="btnSize">Set Up Meeting With Counselor</button>
             </div>
             <div className="divider"></div>
             <div className="size1">
@@ -34,7 +34,7 @@ class DegreeChanges extends Component {
                     </div>
                     <div className="flip-card-back">
                       <h1>Degree Name: </h1>
-                      <p>Software Engieering</p>
+                      <p>Software Engineering</p>
                       <p>Degree Details: development for computers in information technology.</p>
                     </div>
                   </div>
@@ -61,7 +61,7 @@ class DegreeChanges extends Component {
               <li>
                 <img src={Icon} style={{width:70, height: 70, marginTop: 10, marginRight: 10, padding: 3 }}></img>
                 <h3>Class Name</h3>
-                <p> Meet George</p>
+                <p> New class added</p>
               </li>
               <li>
                 <img src={Icon} style={{width:70, height: 70, marginTop: 10, marginRight: 10, padding: 3 }}></img>
